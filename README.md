@@ -2,8 +2,8 @@
 
 ## Summary
 
-We explore the genetic algorithm in the context of a pathfinding problem: given a virtual robot (at some position (x,y)) capable of receiving instructions ('move up', 'move down',...) to move in a 2D grid, what is the set of instructions we should feed it to make it reach the goal (x', y')? (We do not care if the path is the shortest or not).   
-Pathfinding problems are both interesting and useful, but there are many (better) ways to deal with them.
+We explore the genetic algorithm in the context of a pathfinding problem: *given a virtual robot (at some position (x,y)) capable of receiving instructions ('move up', 'move down',...) to move in a 2D grid, what is the set of instructions we should feed it to make it reach the goal (x', y')? (We do not care if the path is the shortest or not).*   
+Pathfinding problems like this are both interesting and useful, but there are many (better) ways to deal with them.
 Here we use the problem as a way to explore the genetic algorithm, and to see it in action in a geometrical and intuitive problem. I learned the conceptual framework behind the genetic algorith in [Norvig] (where the authors discuss how to solve the 8-queens problem in chess using this algorithm).
 
 ## Main steps of the project
