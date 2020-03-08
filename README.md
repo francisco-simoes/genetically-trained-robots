@@ -46,22 +46,35 @@ But how to evolve our robots?
 Implementing the algorithm with initial position (0,0) for all robots and goal=(9,9), it was necessary to use 139 generations (iterations) to find a robot that achieves the goal.
    
    Best robot of generation 20:
-   
-   ![](images/BestRobot20.png)
+   <p align="center">
+  <img src="images/BestRobot20.png" alt="hi" class="inline"/>
+</p>
+
    
    Best robot of generation 40:
    
-   ![](images/BestRobot40.png) 
+   <p align="center">
+  <img src="images/BestRobot40.png" alt="hi" class="inline"/>
+</p>
+
    
    Best robot of generation 60:
    
-   ![](images/BestRobot60.png)
+   <p align="center">
+  <img src="images/BestRobot60.png" alt="hi" class="inline"/>
+</p>
+
    
    Best robot of generation 139:
    
-   ![](images/BestRobot139.png)
-   
-   ![](images/fitness_plot.png)
+   <p align="center">
+  <img src="images/BestRobot139.png" alt="hi" class="inline"/>
+</p>
+
+   <p align="center">
+  <img src="images/fitness_plot.png" alt="hi" class="inline"/>
+</p>
+
    
    ## References
 
