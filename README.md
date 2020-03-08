@@ -4,13 +4,13 @@
 
 We explore the genetic algorithm in the context of a pathfinding problem: *given a virtual robot (at some position (x,y)) capable of receiving instructions ('move up', 'move down',...) to move in a 2D grid, what is the set of instructions we should feed it to make it reach the goal (x', y')? (We do not care if the path is the shortest or not).*   
 Pathfinding problems like this are both interesting and useful, but there are many (better) ways to deal with them.
-Here we use the problem as a way to explore the genetic algorithm, and to see it in action in a geometrical and intuitive problem. I learned the conceptual framework behind the genetic algorith in [Norvig] (where the authors discuss how to solve the 8-queens problem in chess using this algorithm).
+Here we use the problem as a way to explore the genetic algorithm, and to see it in action in a geometrical and intuitive problem. The conceptual framework behind the genetic algorith can be found in [Norvig] (where the authors discuss how to solve the 8-queens problem in chess using this algorithm).
 
 ## Main steps of the project
 
 ### Our robots and grid
   
-Our robots must be at a certain position in the grid at all times, and be able to move up. down, left or right (on each step).  
+Our robots must be at a certain position in the grid at all times, and be able to move up, down, left or right (on each step).  
 I use a 10x10 grid, meaning that the maximum number of steps one could possibly need to reach one position from another is (10-1) x 2 = 18.
 Accordingly, the set of orders that the a robot must obey will be written as a string of length 18, each character being either 'u', 'd', 'l' or 'r', corresponding to the four directions we want the robot to move in. 
 
@@ -24,7 +24,7 @@ So I started by defining a Robot class compatible with these requirements.
 A robot is an instance of the Robot class.
 To define a robot we need to specify an initial grid position (x,y), an ID number for the robot and a string `orders` of length 18 as described above.
 
-But how to evolve our robots?
+But how to evolve our robots? With the genetic algorith.
 
 ### The genetic algorithm mimics natural selection:
 
@@ -43,6 +43,7 @@ But how to evolve our robots?
 We have an obvious choice for our fitness score: {max_distance - the distance between the final position of the robot and the goal}, so that the robot closest to the goal has the highest fitness.
 It is clear that we do not want to use the Euclidean distance in this project. To see this, consider the image below which represents a miniature (3x3) version of our grid.
 <p align="center">
+  
   <img src="images/distance.png" alt="hi" class="inline"/>
 </p>
 Goal = brown; X = green, Y = yellow.
@@ -89,7 +90,7 @@ Implementing the algorithm with initial position (0,0) for all robots and goal=(
   <img src="images/BestRobot60.png" alt="hi" class="inline"/>
 </p>
 
-... Finally, after 79 generations ... :
+... Finally, after 79 more generations ... :
    
    Best robot of generation 139:
    
@@ -97,7 +98,7 @@ Implementing the algorithm with initial position (0,0) for all robots and goal=(
   <img src="images/BestRobot139.png" alt="hi" class="inline"/>
 </p>
 
-The "bes trobot" of a generation is the one with the highest fitness.
+The "best robot" of a generation is the one with the highest fitness.
 We can visualize how the fitness of the best robot changes accross generations.
    <p align="center">
   <img src="images/fitness_plot.png" alt="hi" class="inline"/>
